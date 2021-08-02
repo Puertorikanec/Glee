@@ -3,6 +3,121 @@
 @import 'fonts';
 @import 'global';
 
+.header {
+    padding: 60px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+    display: flex;
+
+    &__img {
+        margin-right: 13px;
+    }
+
+    &__text {
+        color: $accent;
+        font-size: 36px;
+        line-height: 1.6;
+        @extend %rubik-500;
+        text-transform: capitalize;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__list-item:not(:first-child) {
+        margin-left: 35px;
+    }
+
+    &__list-link {
+        color: $accent;
+        @extend %rubik-500;
+        text-transform: capitalize;
+    }
+}
+
+.user-nav {
+    display: flex;
+
+    &__search {
+        width: 52px;
+        height: 52px;
+        background-color: #edf1f4;
+        border-radius: 50%;
+        margin-right: 20px;
+        text-align: center;
+
+        &-img {
+            margin: 18px auto;
+        }
+    }
+
+    &__inner {
+        visibility: hidden;
+
+    }
+
+    &__inner--active {
+        display: flex;
+        visibility: visible;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #fcd7b6;
+        border-radius: 25px;
+        margin-right: 20px;
+        transition: all 0.5s ease-in;
+        transition-delay: 0.2s;
+    }
+
+    &__link {
+        padding: 0 28px;
+        position: relative;
+    }
+
+    &__num {
+        width: 16px;
+        height: 16px;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        bottom: 17px;
+        text-align: center;
+        line-height: 1.8;
+        font-size: 10px;
+        @extend %dmsans-400;
+    }
+
+    &__link:not(:last-child) {
+        border-right: 1px solid #fde7d3;
+    }
+
+    &__btn {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__btn::after {
+        position: absolute;
+        content: url('../images/header-icon/btn-dots.svg');
+        top: 16px;
+        right: 16px;
+    }
+
+}
 
 
 @import 'media';
