@@ -5,6 +5,7 @@
 
 .header {
     padding: 60px 0;
+    background-color: #FFFFFF;
 
     &__wrapper {
         display: flex;
@@ -15,17 +16,14 @@
 
 .logo {
     display: flex;
+    color: $accent;
+    font-size: 36px;
+    line-height: 1.6;
+    @extend %rubik-500;
+    text-transform: capitalize;
 
     &__img {
         margin-right: 13px;
-    }
-
-    &__text {
-        color: $accent;
-        font-size: 36px;
-        line-height: 1.6;
-        @extend %rubik-500;
-        text-transform: capitalize;
     }
 }
 
@@ -118,6 +116,128 @@
     }
 
 }
+
+.footer {
+    background-color: #FFFFFF;
+    padding: 0 300px;
+}
+
+.footer-top {
+    padding: 80px 0 77px;
+    border-bottom: 1px solid #dae4e9;
+
+    &__items {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: #1f2044;
+        font-size: 16px;
+        line-height: 1.3;
+        @extend %dmsans-700;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+
+    &__logo {
+        margin-bottom: 10px;
+    }
+
+    &__contakts-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__servises-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__account-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__newsletter-item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    &__item {
+        max-width: 270px;
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #7b7b7b;
+    }
+
+    &__contakts {
+        max-width: 200px
+    }
+
+    &__link {
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #7b7b7b;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__form-input {
+        max-width: 170px;
+        padding: 10px 16px;
+        background-color: #fef7f0;
+
+        &::placeholder {
+            color: #234969;
+            @extend %dmsans-700;
+            font-size: 12px;
+        }
+    }
+
+    &__form-btn {
+        max-width: 100px;
+        padding: 8px 11px;
+        background-color: #a3bbc8;
+        color: #FFFFFF;
+        @extend %dmsans-400;
+        font-size: 16px;
+        line-height: 1.3;
+        cursor: pointer;
+
+    }
+}
+
+.footer-bottom {
+    padding: 37px 0 40px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &__nav-list {
+        display: flex;
+    }
+
+    &__nav-item:not(:last-child) {
+        padding-right: 16px;
+        border-right: 1px solid #7b7b7b;
+    }
+
+    &__nav-item:not(:first-child) {
+        padding-left: 16px;
+    }
+
+    &__nav-link {
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #7b7b7b;
+    }
+}
+
+
+
+
 
 
 @import 'media';
