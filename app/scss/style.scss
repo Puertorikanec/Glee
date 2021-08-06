@@ -40,6 +40,7 @@
         color: $accent;
         @extend %rubik-500;
         text-transform: capitalize;
+        padding: 0 2px;
     }
 }
 
